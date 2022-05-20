@@ -1,0 +1,20 @@
+{
+  "name": "cse341-techmoms",
+  "version": "1.0.0",
+  "description": "Tech Moms Backend - test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicabreedlove/cse341-techmoms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicabreedlove/cse341-techmoms/issues"
+  },
+  "homepage": "https://github.com/jessicabreedlove/cse341-techmoms#readme"
+}
