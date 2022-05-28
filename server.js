@@ -14,6 +14,7 @@ app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
+  //do I even need all of these?
   res.setHeader('Access-Control-Expose-Headers', 'Content-Disposition');
 
   res.setHeader(
