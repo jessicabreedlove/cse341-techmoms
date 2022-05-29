@@ -5,7 +5,7 @@ const doc = {
     title: 'My Tech Mom API',
     description: 'Tech Moms Directory API',
   },
-  host: 'localhost:8080',
+  host: 'cse341-techmoms.herokuapp',
   schemes: ['https'],
 };
 
