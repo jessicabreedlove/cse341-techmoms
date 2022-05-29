@@ -5,11 +5,9 @@
     "description": "Tech Moms Directory API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-techmoms.herokuapp",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
