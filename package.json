@@ -4,8 +4,8 @@
   "description": "Tech Moms Backend - test",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node swagger.js"
+    "dev": "cross-env NODE_ENV=development nodemon server",
+    "start": "cross-env NODE_ENV=production node server"
   },
   "repository": {
     "type": "git",
@@ -19,13 +19,22 @@
   },
   "homepage": "https://github.com/jessicabreedlove/cse341-techmoms#readme",
   "dependencies": {
+    "connect-mongo": "^4.6.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.3.4",
-    "nodemon": "^2.0.16",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
     "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.16",
     "swagger-autogen": "^2.21.2"
   }
 }
