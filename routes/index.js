@@ -3,7 +3,9 @@ const routes = require('express').Router();
 // @desc  Login/landing page
 // @route GET /
 routes.get('/', (req, res) => {
-  res.render('login');
+  res.render('login', {
+    layout: 'login',
+  });
 });
 
 // @desc  Dashboard page
