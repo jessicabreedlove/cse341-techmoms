@@ -1,5 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
+const exphbs = require('express-handlebars');
 const connectDB = require('./config/db.js');
 
 //load config
@@ -10,7 +12,21 @@ connectDB();
 //initialize app
 const app = express();
 
+//logging (with morgan)
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
+//express handlebars -- not really working to change to .hbs
+app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }));
+app.set('view engine', '.hbs');
+
+//routes
+app.use('/', require('./routes/index'));
+
 const port = process.env.PORT || 5000;
+
+//what i had before oauth video
 // const bodyParser = require('body-parser');
 // const connect = require('./db/connect');
 // const swaggerUi = require('swagger-ui-express');
