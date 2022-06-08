@@ -15,4 +15,10 @@ routes.get('/dashboard', ensureAuth, (req, res) => {
   res.render('dashboard');
 });
 
+// @desc  Techmoms Contacts page
+// @route GET /techmoms
+routes.get('/techmoms', ensureAuth, (req, res) => {
+  res.render('techmoms');
+});
+
 module.exports = routes;
