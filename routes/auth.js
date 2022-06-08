@@ -1,4 +1,4 @@
-const { Router } = require('express');
+// const { Router } = require('express');
 const passport = require('passport');
 const routes = require('express').Router();
 
@@ -18,7 +18,7 @@ routes.get(
 
 //@desc   Logout user
 //@route  /auth/logout
-Router.get('/logout', (req, res) => {
+routes.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
 });
