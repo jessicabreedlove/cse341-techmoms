@@ -1,0 +1,5 @@
+###get all techmoms local
+GET http://localhost:5000/techmoms
+
+###get all techmoms heroku
+GET https://cse341-techmoms.herokuapp.com/techmoms HTTP/1.1
