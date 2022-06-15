@@ -31,6 +31,13 @@
         "parameters": [],
         "responses": {}
       }
+    },
+    "/employers": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
     }
   }
 }
