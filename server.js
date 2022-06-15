@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const passport = require('passport');
 const session = require('express-session');
-const MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo').default;
 const connectDB = require('./config/db.js');
 
 //me trying to bridge the gap with swagger
