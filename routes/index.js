@@ -21,4 +21,10 @@ routes.get('/techmoms', ensureAuth, (req, res) => {
   res.render('techmoms');
 });
 
+// @desc  Employers Contact page
+// @route GET /employers
+routes.get('/employers', ensureAuth, (req, res) => {
+  res.render('employers');
+});
+
 module.exports = routes;
