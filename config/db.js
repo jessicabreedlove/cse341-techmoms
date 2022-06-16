@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+//.nev variables MONGODB_URI
+const dotenv = require('dotenv');
+dotenv.config();
+
 console.log(`I am connecting to ${process.env.MONGO_URI}`);
 const connectDB = async () => {
   try {
