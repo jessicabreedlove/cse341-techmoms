@@ -17,9 +17,11 @@ routes.get('/dashboard', ensureAuth, (req, res) => {
 
 // @desc  Techmoms Contacts page
 // @route GET /techmoms
-routes.get('/techmoms', ensureAuth, (req, res) => {
-  res.render('techmoms');
-});
+// routes.get('/techmoms', ensureAuth, (req, res) => {
+//   res.render('techmoms');
+// });
+
+routes.use('/techmoms', ensureAuth, require('./techmoms'));
 
 // @desc  Employers Contact page
 // @route GET /employers

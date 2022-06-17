@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server",
-    "start": "node server.js"
+    "start": "node server.js",
+    "swagger": "node swagger.js"
   },
   "repository": {
     "type": "git",

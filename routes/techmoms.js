@@ -12,15 +12,15 @@ routes.get('/', techmomsController.getAll);
 routes.get('/:id', techmomsController.getSingle);
 
 // @desc  Create new techmom contact
-// @route GET /
+// @route POST /
 routes.post('/', techmomsController.createTechmom);
 
 // @desc  Update a specific techmom contact
-// @route GET /
+// @route PUT /
 routes.put('/:id', techmomsController.updateTechmom);
 
 // @desc  Delete a specific techmom contact
-// @route GET /
+// @route DELETE /
 routes.delete('/:id', techmomsController.deleteTechmom);
 
 module.exports = routes;

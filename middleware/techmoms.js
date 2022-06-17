@@ -2,6 +2,9 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
+  /*
+  #swagger.description = 'This is the description of my api'
+  */
   const result = await mongodb.getCollection().find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
