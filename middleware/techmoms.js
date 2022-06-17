@@ -6,6 +6,7 @@ const getAll = async (req, res) => {
   #swagger.description = 'This is the description of my api'
   */
   const result = await mongodb.getCollection().find();
+  console.log(result);
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
