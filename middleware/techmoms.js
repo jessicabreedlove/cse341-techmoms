@@ -2,6 +2,7 @@ const mongodb = require('../config/db');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
+  console.log('get all techmoms');
   /*
   #swagger.description = 'This is the description of my api'
   */

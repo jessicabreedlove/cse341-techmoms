@@ -51,6 +51,9 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+});
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 
