@@ -21,7 +21,7 @@ routes.get('/dashboard', ensureAuth, (req, res) => {
 //   res.render('techmoms');
 // });
 
-routes.use('/techmoms', ensureAuth, require('./techmoms'));
+routes.use('/techmoms', require('./techmoms'));
 
 // @desc  Employers Contact page
 // @route GET /employers
