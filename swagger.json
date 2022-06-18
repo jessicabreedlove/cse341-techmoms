@@ -25,13 +25,6 @@
         "responses": {}
       }
     },
-    "/employers": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/techmoms/": {
       "get": {
         "description": "Get all tech moms contacts",
