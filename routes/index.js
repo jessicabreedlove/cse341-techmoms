@@ -7,7 +7,6 @@ routes.get('/', ensureGuest, (req, res, next) => {
   res.render('login', {
     layout: 'login',
   });
-  next();
 });
 
 // @desc  Dashboard page

@@ -12,15 +12,15 @@ routes.get('/', employersController.getAll);
 routes.get('/:id', employersController.getSingle);
 
 // @desc  Create new Employer contact
-// @route GET /
+// @route POST /
 routes.post('/', employersController.createEmployer);
 
 // @desc  Update a specific Employer contact
-// @route GET /
+// @route PUT /:id
 routes.put('/:id', employersController.updateEmployer);
 
 // @desc  Delete a specific Employer contact
-// @route GET /
+// @route DELETE /:id
 routes.delete('/:id', employersController.deleteEmployer);
 
 module.exports = routes;
