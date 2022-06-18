@@ -17,12 +17,12 @@ routes.get('/dashboard', ensureAuth, (req, res) => {
 });
 
 // @desc  Techmoms Contacts page
-// @route GET /techmoms
+// @route USE /techmoms
 
-routes.use('/techmoms', require('./techmoms'));
+routes.use('/techmoms', ensureAuth, require('./techmoms'));
 
 // @desc  Employers Contact page
-// @route GET /employers
-routes.get('/employers', ensureAuth, require('./employers'));
+// @route USE /employers
+routes.tuse('/employers', ensureAuth, require('./employers'));
 
 module.exports = routes;
