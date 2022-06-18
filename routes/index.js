@@ -23,6 +23,6 @@ routes.use('/techmoms', ensureAuth, require('./techmoms'));
 
 // @desc  Employers Contact page
 // @route USE /employers
-routes.tuse('/employers', ensureAuth, require('./employers'));
+routes.use('/employers', ensureAuth, require('./employers'));
 
 module.exports = routes;
