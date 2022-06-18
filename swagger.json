@@ -34,7 +34,7 @@
     },
     "/techmoms/": {
       "get": {
-        "description": "This is the description of my api",
+        "description": "Get all tech moms contacts",
         "produces": [
           "application/json"
         ],
@@ -46,7 +46,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create techmom contact",
         "parameters": [
           {
             "name": "body",
@@ -91,7 +91,7 @@
     },
     "/techmoms/{id}": {
       "get": {
-        "description": "",
+        "description": "Get single techmom contact",
         "produces": [
           "application/json"
         ],
@@ -110,7 +110,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Update techmom contact by ID",
         "parameters": [
           {
             "name": "id",
@@ -159,7 +159,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete Tech mom contact by ID",
         "parameters": [
           {
             "name": "id",

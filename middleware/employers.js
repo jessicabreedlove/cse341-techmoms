@@ -2,6 +2,9 @@ const mongodb = require('../config/db');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
+  /*
+  #swagger.description = 'Get all employers contacts'
+  */
   const result = await mongodb.getCollection().find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
@@ -10,6 +13,9 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  /*
+  #swagger.description = 'Get single employer contact by ID'
+  */
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getCollection().find({ _id: userId });
   result.toArray().then((lists) => {
@@ -20,6 +26,9 @@ const getSingle = async (req, res) => {
 
 const createEmployer = async (req, res) => {
   const employer = {
+    /*
+  #swagger.description = 'Create employer contact'
+  */
     companyName: req.body.companyName,
     companyLocation: req.body.companyLocation,
     companySite: req.body.companySite,
@@ -39,6 +48,9 @@ const createEmployer = async (req, res) => {
 };
 
 const updateEmployer = async (req, res) => {
+  /*
+  #swagger.description = 'Update employer contact by ID'
+  */
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const employer = {
@@ -64,6 +76,9 @@ const updateEmployer = async (req, res) => {
 };
 
 const deleteEmployer = async (req, res) => {
+  /*
+  #swagger.description = 'Delete employer by ID'
+  */
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getCollection().remove({ _id: userId }, true);
   console.log(response);
