@@ -3,10 +3,11 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
 // @desc  Login/landing page
 // @route GET /
-routes.get('/', ensureGuest, (req, res) => {
+routes.get('/', ensureGuest, (req, res, next) => {
   res.render('login', {
     layout: 'login',
   });
+  next();
 });
 
 // @desc  Dashboard page
@@ -17,16 +18,11 @@ routes.get('/dashboard', ensureAuth, (req, res) => {
 
 // @desc  Techmoms Contacts page
 // @route GET /techmoms
-// routes.get('/techmoms', ensureAuth, (req, res) => {
-//   res.render('techmoms');
-// });
 
 routes.use('/techmoms', require('./techmoms'));
 
 // @desc  Employers Contact page
 // @route GET /employers
-routes.get('/employers', ensureAuth, (req, res) => {
-  res.render('employers');
-});
+routes.get('/employers', ensureAuth, require('./employers'));
 
 module.exports = routes;

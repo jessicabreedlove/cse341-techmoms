@@ -1,12 +1,12 @@
 const mongodb = require('../config/db');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res) => {
+const getAll = async (req, res, next) => {
   console.log('get all techmoms');
   /*
-  #swagger.description = 'This is the description of my api'
+  #swagger.description = 'Get all tech moms contacts'
   */
-  const result = await mongodb.getCollection().find();
+  const result = await mongodb.db().collection('mom-info').find();
   console.log(result);
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
@@ -15,6 +15,9 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  /*
+  #swagger.description = 'Get single techmom contact'
+  */
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getCollection().find({ _id: userId });
   result.toArray().then((lists) => {
@@ -24,6 +27,9 @@ const getSingle = async (req, res) => {
 };
 
 const createTechmom = async (req, res) => {
+  /*
+  #swagger.description = 'Create techmom contact'
+  */
   const techmom = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -48,6 +54,9 @@ const createTechmom = async (req, res) => {
 const updateTechmom = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
+  /*
+  #swagger.description = 'Update techmom contact by ID'
+  */
   const techmom = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -73,6 +82,9 @@ const updateTechmom = async (req, res) => {
 };
 
 const deleteTechmom = async (req, res) => {
+  /*
+  #swagger.description = 'Delete Tech mom contact by ID'
+  */
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getCollection().remove({ _id: userId }, true);
   console.log(response);
